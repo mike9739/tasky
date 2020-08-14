@@ -9,6 +9,7 @@ use Tests\DuskTestCase;
 class LeadsTest extends DuskTestCase
 {
     // use DatabaseMigrations;
+    private $emailTest;
 
     /**
      * Prueba de aceptación de formulario de contacto
@@ -25,19 +26,23 @@ class LeadsTest extends DuskTestCase
      */
     public function testLeadSaving()
     {
+        $emailTest="correo".rand(0,1000)."0@correo.com";
         $this->browse(function (Browser $browser) {
-            $browser->visit('/');
-            $browser->assertSee('faucibus donec nulla nam scelerisque ac ipsum ac penatibus');
 
+            $browser->visit('tasky.test');
+            $browser->assertSee('faucibus donec nulla nam scelerisque ac ipsum ac penatibus');
             $browser->with('form', function ($form) {
+
                 $form->click('input[name="nombre"]')
-                    ->type('nombre', /* ... */);
-                /* ... */
-                $form->press(/* ... */);
-                $form->waitforText(/* ... */);
+                    ->type('Juan de Quiroga');
+                $form->click('input[name="email"]')
+                    ->type($this->emailTest);
+                $form->click('input[name="telefono"]')
+                    ->type('1111111111');
+                $form->press('input');
             });
         });
 
-        $this->assertDatabaseHas(/* ... */);
+        $this->assertDatabaseHas('form',['email'=> $emailTest]);
     }
 }

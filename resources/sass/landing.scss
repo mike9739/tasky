@@ -53,7 +53,9 @@ $mq-mobile-small: 440px;
 
 
 html{ -webkit-text-size-adjust: 100%; }
-
+.withe-text{
+    color: white;
+}
 html, body{
   margin: 0;
   padding: 0;
@@ -66,11 +68,11 @@ body{
   background-image: url('/img/hero.jpg');
   background-repeat: no-repeat;
   background-position: top center;
-  background-size: cover;
-  background:
-    url('/img/hero.jpg') no-repeat top center / auto 700px;
-  padding-bottom: 350px;
-  margin-bottom: -350px;
+  background-size: auto;
+  background: url('/img/hero.jpg') no-repeat top center / auto 1080px;
+  //padding-bottom: 350px;
+  //margin-bottom: -350px;
+    width: 100%;
 }
 
 *{

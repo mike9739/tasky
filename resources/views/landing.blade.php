@@ -24,17 +24,17 @@
         <nav class="topbar-menu">
           <ul class="topbar-menu--ul">
             <li class="topbar-menu--li">
-              <div class="icontext">
+              <div class="icontext withe-text ">
                 <i class="svg">
                   @svg('icon-whatsapp')
                 </i>
-                <span>
+                <span class="">
                   123 456 78 99
                 </span>
               </div>
             </li>
             <li class="topbar-menu--li">
-              <div class="icontext">
+              <div class="icontext withe-text">
                 <i class="svg">
                   @svg('icon-telefono')
                 </i>
@@ -44,7 +44,7 @@
               </div>
             </li>
             <li class="topbar-menu--li">
-              <div class="icontext">
+              <div class="icontext withe-text">
                 <i class="svg">
                   @svg('icon-mail')
                 </i>

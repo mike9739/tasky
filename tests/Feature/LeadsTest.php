@@ -22,12 +22,13 @@ class LeadsTest extends TestCase
      */
     public function testLeadSaving()
     {
-        $response = $this->post('/api/lead', /* ... */);
+        $emailTest="correo".rand(0,1000)."0@correo.com";
+        $userData = ["nombre"=>"Juan Ramirez",
+                    "email"=> $emailTest,
+                    "telefono"=> "1111111111"];
+        $response = $this->json('POST','/api/lead', $userData);
+        $response->assertStatus(201);
+        $this->assertDatabaseHas('form',['email'=> $emailTest]);
 
-        $response->assertStatus(/* ... */);
-
-        $response->assertJson(/* ... */);
-
-        $this->assertDatabaseHas(/* ... */);
     }
 }
