@@ -6,6 +6,7 @@ import "../css/style.css"
 const App = (props)=>{
 
     const [show,setShow] = useState(false);
+    const [messageError , serMessageError] = useState('');
     const { register, handleSubmit, errors } = useForm();
      const onSubmit= async (data) => {
 
@@ -13,7 +14,7 @@ const App = (props)=>{
             .then(() => {
                     setShow(true);
             })
-            .catch((err) => {console.log(err)});
+            .catch((err) => {serMessageError(err)});
     }
   return (
       <>
@@ -59,6 +60,7 @@ const App = (props)=>{
       </form> }
 
       {show && <p>Sus datos se han guardado correctamente</p>}
+      {messageError && alert(`Por vavor intente con un email diferente ${messageError}`)}
 
       </>
 
