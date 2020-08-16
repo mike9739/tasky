@@ -39,7 +39,7 @@ class LeadsTest extends DuskTestCase
                     ->type($this->emailTest);
                 $form->click('input[name="telefono"]')
                     ->type('1111111111');
-                $form->press('input');
+                $form->press('enviar');
             });
         });
 

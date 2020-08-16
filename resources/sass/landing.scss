@@ -68,11 +68,11 @@ body{
   background-image: url('/img/hero.jpg');
   background-repeat: no-repeat;
   background-position: top center;
-  background-size: auto;
-  background: url('/img/hero.jpg') no-repeat top center / auto 1080px;
+  background-size: contain;
+  background: url('/img/hero.jpg') no-repeat top center / 99.95%  auto;
   //padding-bottom: 350px;
   //margin-bottom: -350px;
-    width: 100%;
+;
 }
 
 *{

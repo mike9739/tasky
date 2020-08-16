@@ -54,7 +54,7 @@ const App = (props)=>{
               </label>
           </div>
           <div className="p">
-              <button className="button">Enviar</button>
+              <button id="enviar" className="button">Enviar</button>
           </div>
       </form> }
 
